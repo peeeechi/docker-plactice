@@ -1,0 +1,21 @@
+version: "3"
+services: 
+  master:
+    container_name: master
+    image: jenkins/jenkins:latest
+    # image: jenkins:2.60.3 # 最近更新されていない(latestタグは使用できない)
+    ports: 
+      - 8080:8080
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+    links: 
+      - slave01
+
+  slave01:
+    container_name: slave01
+    # image: jenkinsci/ssh-slave
+    build: 
+      context: .
+      dockerfile: Dockerfile-jenkinsci-slave
+    environment: 
+      - JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBYM+CB7B8xGv/k6kbj6I/1VEDkkz9Dt3ndZqyLplrVu8nHfBeVvRsw9CzfAtfxb6q/UE9eXep8zq8R8Bp0xH0gdRGr+5npwPjQDPygkEYrvI+B046OFmPxC35QMrBHxXafjflkx3RQP2uErD2n5JS/a/YmrGE4APJAfO7Nugsez2hjmLKVJk6o6w8H5y3k1TcQ0M+DlM6ex32BOCtC/omdGjQuChj8XeeIH/7XTkbruu4rqKLXsZv4bgyfaR8g5wWVFIxjH7Y7FprWyXpD46Z7qEHHO7nRe7q/oWpP8F7RAXjCUkUz+QJvrhBk7oy9lTVlr1c1qbAAldimC/1oYLR satoshi.o4o4.inoue@gmail.com

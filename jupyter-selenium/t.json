@@ -1,0 +1,68 @@
+[
+    {
+        "traceId": "1384f9b21592a4cf8b8d418dd5d4423a",
+        "spanId": "3db594604a6927a0",
+        "spanKind": "INTERNAL",
+        "eventTime": 1622375934986173800,
+        "eventName": "exception",
+        "attributes": {
+            "driver.url": "http://localhost:1503",
+            "exception.type": "org.openqa.selenium.WebDriverException",
+            "exception.message": "Error while creating session with the driver service. Stopping driver service: unknown error: cannot create temp dir for user data dir\nBuild info: version: '4.0.0-beta-1', revision: '1f4909f59c*'\nSystem info: host: 'bde27a28bddc', ip: '172.26.0.2', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.72-microsoft-standard-WSL2', java.version: '1.8.0_275'\nDriver info: driver.version: unknown\nremote stacktrace: #0 0x55ce5b949e79 <unknown>\n",
+            "logger": "org.openqa.selenium.grid.node.config.DriverServiceSessionFactory",
+            "session.capabilities": "Capabilities {browserName: chrome, goog:chromeOptions: {args: [--disable-dev-shm-usage], extensions: []}, version: }",
+            "exception.stacktrace": "org.openqa.selenium.WebDriverException: unknown error: cannot create temp dir for user data dir\nBuild info: version: '4.0.0-beta-1', revision: '1f4909f59c*'\nSystem info: host: 'bde27a28bddc', ip: '172.26.0.2', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.72-microsoft-standard-WSL2', java.version: '1.8.0_275'\nDriver info: driver.version: unknown\nremote stacktrace: #0 0x55ce5b949e79 <unknown>\n\n\tat sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)\n\tat org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)\n\tat org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$1(ProtocolHandshake.java:126)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)\n\tat java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)\n\tat java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)\n\tat java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)\n\tat java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)\n\tat java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)\n\tat java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\n\tat java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)\n\tat org.openqa.selenium.grid.node.config.DriverServiceSessionFactory.apply(DriverServiceSessionFactory.java:113)\n\tat org.openqa.selenium.grid.node.config.DriverServiceSessionFactory.apply(DriverServiceSessionFactory.java:58)\n\tat org.openqa.selenium.grid.node.local.SessionSlot.apply(SessionSlot.java:134)\n\tat org.openqa.selenium.grid.node.local.LocalNode.newSession(LocalNode.java:245)\n\tat org.openqa.selenium.grid.distributor.local.LocalDistributor.lambda$reserve$4(LocalDistributor.java:380)\n\tat org.openqa.selenium.grid.distributor.Distributor.newSession(Distributor.java:220)\n\tat org.openqa.selenium.grid.distributor.local.LocalDistributor.handleNewSessionRequest(LocalDistributor.java:153)\n\tat org.openqa.selenium.grid.distributor.local.LocalDistributor.lambda$new$0(LocalDistributor.java:133)\n\tat org.openqa.selenium.events.EventListener.accept(EventListener.java:43)\n\tat org.openqa.selenium.events.EventListener.accept(EventListener.java:25)\n\tat org.openqa.selenium.events.local.GuavaEventBus$Listener.handle(GuavaEventBus.java:84)\n\tat sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:87)\n\tat com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:144)\n\tat com.google.common.eventbus.Subscriber$1.run(Subscriber.java:72)\n\tat com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:30)\n\tat com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:67)\n\tat com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:108)\n\tat com.google.common.eventbus.EventBus.post(EventBus.java:212)\n\tat org.openqa.selenium.events.local.GuavaEventBus.fire(GuavaEventBus.java:58)\n\tat org.openqa.selenium.grid.sessionqueue.local.LocalNewSessionQueue.retryRequest(LocalNewSessionQueue.java:154)\n\tat org.openqa.selenium.grid.sessionqueue.local.LocalNewSessionQueue.lambda$offerFirst$0(LocalNewSessionQueue.java:130)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat java.lang.Thread.run(Thread.java:748)\n"
+        }
+    },
+    {
+        "traceId": "1384f9b21592a4cf8b8d418dd5d4423a",
+        "spanId": "0fe17f9f8a3f7cd4",
+        "spanKind": "INTERNAL",
+        "eventTime": 1622375934998738700,
+        "eventName": "No slots available for capabilities ",
+        "attributes": {
+            "session.request.downstreamdialect": "[OSS, W3C]",
+            "current.session.count": 0,
+            "logger": "org.openqa.selenium.grid.node.local.LocalNode",
+            "session.request.capabilities": "Capabilities {browserName: chrome, goog:chromeOptions: {args: [--disable-dev-shm-usage], extensions: []}, version: }"
+        }
+    },
+    {
+        "traceId": "1384f9b21592a4cf8b8d418dd5d4423a",
+        "spanId": "16f393227d6e8f7e",
+        "spanKind": "INTERNAL",
+        "eventTime": 1622375934962291900,
+        "eventName": "Session request received by the distributor",
+        "attributes": {
+            "logger": "org.openqa.selenium.grid.distributor.local.LocalDistributor",
+            "request.payload": "{\n  \"desiredCapabilities\": {\n    \"browserName\": \"chrome\",\n    \"version\": \"\",\n    \"goog:chromeOptions\": {\n      \"extensions\": [\n      ],\n      \"args\": [\n        \"--disable-dev-shm-usage\"\n      ]\n    },\n    \"platform\": \"ANY\"\n  },\n  \"capabilities\": {\n    \"firstMatch\": [\n      {\n        \"browserName\": \"chrome\",\n        \"goog:chromeOptions\": {\n          \"extensions\": [\n          ],\n          \"args\": [\n            \"--disable-dev-shm-usage\"\n          ]\n        }\n      },\n      {\n        \"browserName\": \"chrome\",\n        \"platformName\": \"any\",\n        \"goog:chromeOptions\": {\n          \"extensions\": [\n          ],\n          \"args\": [\n            \"--disable-dev-shm-usage\"\n          ]\n        }\n      }\n    ]\n  }\n}"
+        }
+    },
+    {
+        "traceId": "1384f9b21592a4cf8b8d418dd5d4423a",
+        "spanId": "16f393227d6e8f7e",
+        "spanKind": "INTERNAL",
+        "eventTime": 1622375934999941400,
+        "eventName": "exception",
+        "attributes": {
+            "exception.type": "org.openqa.selenium.SessionNotCreatedException",
+            "exception.message": "Unable to create session: Could not start a new session. Unable to create session for <CreateSessionRequest with Capabilities {browserName: chrome, goog:chromeOptions: {args: [--disable-dev-shm-usage], extensions: []}, version: }>\nBuild info: version: '4.0.0-beta-1', revision: '1f4909f59c*'\nSystem info: host: 'bde27a28bddc', ip: '172.26.0.2', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.72-microsoft-standard-WSL2', java.version: '1.8.0_275'\nDriver info: driver.version: unknown",
+            "logger": "org.openqa.selenium.grid.distributor.local.LocalDistributor",
+            "request.payload": "{\n  \"desiredCapabilities\": {\n    \"browserName\": \"chrome\",\n    \"version\": \"\",\n    \"goog:chromeOptions\": {\n      \"extensions\": [\n      ],\n      \"args\": [\n        \"--disable-dev-shm-usage\"\n      ]\n    },\n    \"platform\": \"ANY\"\n  },\n  \"capabilities\": {\n    \"firstMatch\": [\n      {\n        \"browserName\": \"chrome\",\n        \"goog:chromeOptions\": {\n          \"extensions\": [\n          ],\n          \"args\": [\n            \"--disable-dev-shm-usage\"\n          ]\n        }\n      },\n      {\n        \"browserName\": \"chrome\",\n        \"platformName\": \"any\",\n        \"goog:chromeOptions\": {\n          \"extensions\": [\n          ],\n          \"args\": [\n            \"--disable-dev-shm-usage\"\n          ]\n        }\n      }\n    ]\n  }\n}",
+            "exception.stacktrace": "org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Unable to create session for <CreateSessionRequest with Capabilities {browserName: chrome, goog:chromeOptions: {args: [--disable-dev-shm-usage], extensions: []}, version: }>\nBuild info: version: '4.0.0-beta-1', revision: '1f4909f59c*'\nSystem info: host: 'bde27a28bddc', ip: '172.26.0.2', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.72-microsoft-standard-WSL2', java.version: '1.8.0_275'\nDriver info: driver.version: unknown\n\tat org.openqa.selenium.grid.distributor.local.LocalDistributor.lambda$reserve$4(LocalDistributor.java:384)\n\tat org.openqa.selenium.grid.distributor.Distributor.newSession(Distributor.java:220)\n\tat org.openqa.selenium.grid.distributor.local.LocalDistributor.handleNewSessionRequest(LocalDistributor.java:153)\n\tat org.openqa.selenium.grid.distributor.local.LocalDistributor.lambda$new$0(LocalDistributor.java:133)\n\tat org.openqa.selenium.events.EventListener.accept(EventListener.java:43)\n\tat org.openqa.selenium.events.EventListener.accept(EventListener.java:25)\n\tat org.openqa.selenium.events.local.GuavaEventBus$Listener.handle(GuavaEventBus.java:84)\n\tat sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:87)\n\tat com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:144)\n\tat com.google.common.eventbus.Subscriber$1.run(Subscriber.java:72)\n\tat com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:30)\n\tat com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:67)\n\tat com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:108)\n\tat com.google.common.eventbus.EventBus.post(EventBus.java:212)\n\tat org.openqa.selenium.events.local.GuavaEventBus.fire(GuavaEventBus.java:58)\n\tat org.openqa.selenium.grid.sessionqueue.local.LocalNewSessionQueue.retryRequest(LocalNewSessionQueue.java:154)\n\tat org.openqa.selenium.grid.sessionqueue.local.LocalNewSessionQueue.lambda$offerFirst$0(LocalNewSessionQueue.java:130)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat java.lang.Thread.run(Thread.java:748)\n"
+        }
+    },
+    {
+        "traceId": "1384f9b21592a4cf8b8d418dd5d4423a",
+        "spanId": "d6a65fee6c03acb0",
+        "spanKind": "INTERNAL",
+        "eventTime": 1622375935000957000,
+        "eventName": "Retry adding to front of queue. All slots are busy.",
+        "attributes": {
+            "request.retry_add": true,
+            "request": "(POST) /session",
+            "logger": "org.openqa.selenium.grid.distributor.local.LocalDistributor",
+            "request.id": "672d8584-e651-4c97-99b1-a71214d473a1"
+        }
+    }
+]
