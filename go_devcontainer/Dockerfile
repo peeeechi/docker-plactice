@@ -1,7 +1,7 @@
 FROM golang:1.15.6
 
-RUN apt update \
-  && apt install -y vi
+# RUN apt update \
+#   && apt install -y vi
 
 ENV GO111MODULE on
 
